@@ -1,12 +1,12 @@
 import { governorsOptions } from "./governors.js";
-
+import { facilityOptions } from "./miningFacility.js";
 
 const container = document.querySelector("#container");
 
 
 const render = async () => {
     const govenorHTML = await governorsOptions()
- 
+    const facilityHTML = await facilityOptions()
 
 
   const composedHTML = `
@@ -21,8 +21,8 @@ const render = async () => {
 
 
             <section>
-                <h2></h2>
-             
+                <h2>Mining Facilities</h2>
+             ${facilityHTML}
             </section>
 
 
