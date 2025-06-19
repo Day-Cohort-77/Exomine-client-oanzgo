@@ -209,15 +209,15 @@
     { "id": 12, "name": "Liam Johnson", "colony_id": 12, "status": "inactive" },
     { "id": 13, "name": "Maria Diaz", "colony_id": 13, "status": "active" },
     { "id": 14, "name": "Nathaniel Brooks", "colony_id": 14, "status": "active" },
-    { "id": 16, "name": "Paul Nguyen", "colony_id": 16, "status": "inactive" },
-    { "id": 17, "name": "Sophia Carter", "colony_id": 17, "status": "active" },
-    { "id": 18, "name": "Liam Scott", "colony_id": 18, "status": "active" },
-    { "id": 19, "name": "Emma Wilson", "colony_id": 19, "status": "active" },
-    { "id": 20, "name": "James Taylor", "colony_id": 20, "status": "active" },
-    { "id": 21, "name": "Ava Anderson", "colony_id": 21, "status": "active" },
-    { "id": 22, "name": "Mia Thomas", "colony_id": 22, "status": "inactive" },
-    { "id": 23, "name": "Noah White", "colony_id": 23, "status": "active" },
-    { "id": 24, "name": "Lucas Harris", "colony_id": 24, "status": "active" }
+    { "id": 15, "name": "Paul Nguyen", "colony_id": 16, "status": "inactive" },
+    { "id": 16, "name": "Sophia Carter", "colony_id": 17, "status": "active" },
+    { "id": 17, "name": "Liam Scott", "colony_id": 18, "status": "active" },
+    { "id": 18, "name": "Emma Wilson", "colony_id": 19, "status": "active" },
+    { "id": 19, "name": "James Taylor", "colony_id": 20, "status": "active" },
+    { "id": 20, "name": "Ava Anderson", "colony_id": 21, "status": "active" },
+    { "id": 21, "name": "Mia Thomas", "colony_id": 22, "status": "inactive" },
+    { "id": 22, "name": "Noah White", "colony_id": 23, "status": "active" },
+    { "id": 23, "name": "Lucas Harris", "colony_id": 24, "status": "active" }
   ],
 
   "regions": [
@@ -272,5 +272,5 @@
     { "id": 22, "name": "Pallas", "type": "asteroid", "location": "Asteroid Belt" },
     { "id": 23, "name": "Moon", "type": "moon", "location": "Earth Orbit" }
   ],
-  "purchased_inventory":[], 
+  "purchased_inventory":[] 
 }

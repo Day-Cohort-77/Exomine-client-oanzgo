@@ -1,11 +1,11 @@
-
+import { governorsOptions } from "./governors.js";
 
 
 const container = document.querySelector("#container");
 
 
 const render = async () => {
-  //const govenorHTML = await 
+    const govenorHTML = await governorsOptions()
  
 
 
@@ -16,7 +16,7 @@ const render = async () => {
         <article id="flex">
             <section class="govenors">
                 <h2>Govenors</h2>
-                {govenorHTML}
+                ${govenorHTML}
             </section>
 
 
