@@ -1,5 +1,12 @@
 const state = {
+selectedGovernor: 0,
+selectedFacility: 0,
+selectedMineral: 0
+}
 
+export const setGovernor = (governorId) => {
+    state.selectedGovernor = governorId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
 export const setFacility = (facilityId) => {
@@ -7,7 +14,29 @@ export const setFacility = (facilityId) => {
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
-export const purchaseMineral = () => {
+export const setMineral = (mineralId) => {
+    state.selectedMineral = mineralId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+}
+
+export const getSelectedFacility = () =>{
+    return state.selectedFacility
+}
+
+export const getSelectedGovernor = () => {
+    return state.selectedGovernor}
+
+export const purchaseMineral = async () => {
+    
+    
+    const orderOptions = {
+       method: "POST",
+       headers: {
+           "Content-Type": "application/json"
+       },
+       body: JSON.stringify(state)
+   }
+    const response = await fetch("http://localhost:8088/colonyMinerals", orderOptions)
     /*
         Does the chosen governor's colony already own some of this mineral?
             - If yes, what should happen?

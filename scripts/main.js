@@ -1,22 +1,23 @@
 import { governorsOptions } from "./governors.js";
 import { facilityOptions } from "./miningFacility.js";
+import { OrderButton } from "./orderButton.js";
 
 const container = document.querySelector("#container");
 
 
 const render = async () => {
-    const govenorHTML = await governorsOptions()
+    const governorHTML = await governorsOptions()
     const facilityHTML = await facilityOptions()
-
+    const buttonHTML = await OrderButton()
 
   const composedHTML = `
         <h1>The GMA</h1>
 
 
         <article id="flex">
-            <section class="govenors">
-                <h2>Govenors</h2>
-                ${govenorHTML}
+            <section class="governors">
+                <h2>Governors</h2>
+                ${governorHTML}
             </section>
 
 
@@ -28,7 +29,7 @@ const render = async () => {
 
             <section>               
             <h2></h2>
-                
+                ${buttonHTML}
             </section>
 
 
@@ -52,5 +53,7 @@ const render = async () => {
 
   container.innerHTML = composedHTML;
 };
+
+document.addEventListener("stateChanged", render)
 
 render()
