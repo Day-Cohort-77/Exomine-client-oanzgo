@@ -45,7 +45,7 @@ const chooseMineral = async (event) => {
 export const facilityOptions = async () => {
   const response = await fetch("http://localhost:8088/facilities");
   const facilities = await response.json();
-
+  const selectedFacility = getSelectedFacility()
   document.addEventListener("change", chooseFacility);
 
   let facilityOptionsHTML = "<h2>Facility Options</h2>";
@@ -53,8 +53,8 @@ export const facilityOptions = async () => {
   facilityOptionsHTML += '<option value="0">Select a Facility</option>';
 
   const facilityArray = facilities.map((facility) => {
-    if (facility.status === "active") {
-      return `<option value ="${facility.id}">${facility.name}</option>`;
+    if (facility.is_active) {
+      return `<option ${selectedFacility !== 0 ? "selected" : ""} value ="${facility.id}">${facility.facilityName}</option>`;
     }
   });
   facilityOptionsHTML += facilityArray.join("");
