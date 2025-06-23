@@ -14,7 +14,7 @@ const chooseFacility = async (event) => {
 //this function should display radio buttons only when our facility choice is non-zero
 //only display the minerals for that certain facility
 
-const chooseMineral = async (event) => {
+export const chooseMineral = async (event) => {
   //check if transient state is non zero
   const selectedFacility = getSelectedFacility();
   // if there is no selection, return an empty string
@@ -33,7 +33,7 @@ const chooseMineral = async (event) => {
     (facilityMineral) => {
       //retrieve the name and quantity of the mineral for the facility
       const foundMineral = minerals.find((mineral) => {
-        return facilityMineral.mineralId === mineral.Id;
+        return facilityMineral.mineralId === mineral.id;
       });
       return `<input type="radio" name="facilityMinerals"/>${foundMineral.name} has ${facilityMineral.quantity} tons available`;
     }

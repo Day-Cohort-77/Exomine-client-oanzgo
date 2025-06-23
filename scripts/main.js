@@ -1,13 +1,14 @@
 import { governorsOptions } from "./governors.js";
-import { facilityOptions } from "./miningFacility.js";
+import { facilityOptions, chooseMineral } from "./miningFacility.js";
 import { OrderButton } from "./orderButton.js";
-
+;
 const container = document.querySelector("#container");
 
 
 const render = async () => {
     const governorHTML = await governorsOptions()
     const facilityHTML = await facilityOptions()
+    const radioButtonsHTML = await chooseMineral()
     const buttonHTML = await OrderButton()
 
   const composedHTML = `
@@ -29,7 +30,7 @@ const render = async () => {
 
             <section>               
             <h2></h2>
-                ${buttonHTML}
+                ${radioButtonsHTML}
             </section>
 
 
